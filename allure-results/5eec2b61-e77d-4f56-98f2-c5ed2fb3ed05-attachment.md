@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: MoreValidations.spec.js >> @smoke Visual Validation
+- Location: tests\MoreValidations.spec.js:49:1
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  53654 pixels (ratio 0.06 of all image pixels) are different.
+
+  Snapshot: test1.png
+
+Call log:
+  - Expect "toHaveScreenshot(test1.png)" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - 37066 pixels (ratio 0.05 of all image pixels) are different.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - 16588 pixels (ratio 0.02 of all image pixels) are different.
+  - waiting 250ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - 53654 pixels (ratio 0.06 of all image pixels) are different.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "About" [ref=e4] [cursor=pointer]:
+      - /url: https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header
+    - link "Store" [ref=e5] [cursor=pointer]:
+      - /url: https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link "Gmail" [ref=e10] [cursor=pointer]:
+          - /url: https://mail.google.com/mail/&ogbl
+        - link "Search for Images" [ref=e12] [cursor=pointer]:
+          - /url: https://www.google.com/imghp?hl=en&ogbl
+          - text: Images
+      - button "Google apps" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+      - link "Sign in" [ref=e20] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+  - generic [ref=e22]:
+    - link "Men's IPL 2026 Finals" [ref=e23] [cursor=pointer]:
+      - /url: /search?sca_esv=535308282edc524d&q=The+humidity+during+the+evening+games+has+been+wild.+Does+that+actually+make+the+ball+harder+to+grip+for+the+spinners,+or+are+the+pacers+struggling+more+with+the+wet+ball%3F&udm=50&oi=ddle&noiga=1&ct=460149016&peek_pws=0&aep=84&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQPQgG
+      - img "Men's IPL 2026 Finals" [ref=e25]
+    - button "Share" [ref=e27]:
+      - generic "Share" [ref=e28] [cursor=pointer]:
+        - img [ref=e32]
+  - search [ref=e35]:
+    - generic [ref=e37]:
+      - generic [ref=e39]:
+        - button "Add files and tools" [ref=e42] [cursor=pointer]:
+          - img [ref=e44]
+        - combobox "Search" [ref=e47]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - button "Search by voice" [ref=e50] [cursor=pointer]:
+              - img [ref=e51]
+            - button "Search by image" [ref=e53] [cursor=pointer]:
+              - img [ref=e54]
+          - link "AI Mode" [ref=e56] [cursor=pointer]:
+            - generic [ref=e58]:
+              - img [ref=e60]
+              - generic [ref=e67]: AI Mode
+      - generic [ref=e69]:
+        - button "Google Search" [ref=e70] [cursor=pointer]
+        - button "I'm Feeling Lucky" [ref=e71] [cursor=pointer]
+  - generic [ref=e72]:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - dialog "Choose Chrome, the browser built by Google":
+                      - generic [ref=e81]:
+                        - generic [ref=e82]:
+                          - generic [ref=e83]: Choose Chrome, the browser built by Google
+                          - generic [ref=e84]: Try a fast, secure browser with automatic updates
+                          - generic [ref=e85]:
+                            - text: By downloading Chrome, you agree to the
+                            - link "Google Terms of Service" [ref=e86] [cursor=pointer]:
+                              - /url: https://policies.google.com/terms
+                            - text: and
+                            - link "Chrome and ChromeOS Additional Terms of Service" [ref=e87] [cursor=pointer]:
+                              - /url: https://www.google.com/chrome/terms/
+                            - text: .
+                          - checkbox "Help make Google Chrome better by automatically sending usage statistics and crash reports to Google. Learn more." [ref=e89]:
+                            - checkbox "Help make Google Chrome better by automatically sending usage statistics and crash reports to Google. Learn more." [checked] [ref=e90]
+                            - generic [ref=e91]:
+                              - text: Help make Google Chrome better by automatically sending usage statistics and crash reports to Google.
+                              - link "Learn more" [ref=e92] [cursor=pointer]:
+                                - /url: https://support.google.com/chrome/answer/96817
+                              - text: .
+                        - generic [ref=e93]:
+                          - button "Do not use Chrome" [ref=e94] [cursor=pointer]:
+                            - generic [ref=e96]: Do not use Chrome
+                          - button "Download Chrome" [ref=e97] [cursor=pointer]:
+                            - generic [ref=e99]: Download Chrome
+    - generic [ref=e101]:
+      - text: "Google offered in:"
+      - link "हिन्दी" [ref=e102] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCDk
+      - link "বাংলা" [ref=e103] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCDo
+      - link "తెలుగు" [ref=e104] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCDs
+      - link "मराठी" [ref=e105] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCDw
+      - link "தமிழ்" [ref=e106] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCD0
+      - link "ગુજરાતી" [ref=e107] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCD4
+      - link "ಕನ್ನಡ" [ref=e108] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCD8
+      - link "മലയാളം" [ref=e109] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCEA
+      - link "ਪੰਜਾਬੀ" [ref=e110] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_Qs34HY2tM1PeNVQnlCZSJbvLBf8%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwjsmfGLweaUAxWpgq8BHZn6MfIQ2ZgBCEE
+  - contentinfo [ref=e112]:
+    - generic [ref=e113]: India
+    - generic [ref=e114]:
+      - generic [ref=e115]:
+        - link "Advertising" [ref=e116] [cursor=pointer]:
+          - /url: https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+        - link "Business" [ref=e117] [cursor=pointer]:
+          - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+        - link "How Search works" [ref=e118] [cursor=pointer]:
+          - /url: https://google.com/search/howsearchworks/?fg=1
+      - generic [ref=e119]:
+        - link "Privacy" [ref=e120] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy?hl=en-IN&fg=1
+        - link "Terms" [ref=e121] [cursor=pointer]:
+          - /url: https://policies.google.com/terms?hl=en-IN&fg=1
+        - button "Settings" [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]: Settings
+```
+
+# Test source
+
+```ts
+  1  | const {test,expect} = require ('@playwright/test')
+  2  | 
+  3  | 
+  4  | test.describe.configure({mode:'serial'})
+  5  | test ('Popup Validation', async ({page}) =>
+  6  | {
+  7  |   
+  8  |     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  9  |     // await page.goto("http://google.com");
+  10 |     // await page.goBack();
+  11 |     // await page.goForward();
+  12 | 
+  13 |     await expect(page.locator('#displayed-text')).toBeVisible();
+  14 |     await page.locator('#hide-textbox').click();
+  15 |     await expect(page.locator('#displayed-text')).toBeHidden();
+  16 |     // await page.pause();
+  17 |     page.on('dialog', dialog => dialog.accept());
+  18 |     await page.locator('#confirmbtn').click();
+  19 |     await page.locator('#mousehover').hover();
+  20 | 
+  21 | 
+  22 |     const framePage = await page.frameLocator('#courses-iframe');
+  23 |     await framePage.locator("li a[href*='lifetime-access']:Visible").click();
+  24 |     const textCheck = await framePage.locator('.text h2').textContent();
+  25 |     console.log (textCheck.split(" ")[1]);
+  26 | 
+  27 | })
+  28 | 
+  29 | test ('@UI Screenshot Validation', async ({page}) =>
+  30 | {
+  31 |   
+  32 |     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  33 |     // await page.goto("http://google.com");
+  34 |     // await page.goBack();
+  35 |     // await page.goForward();
+  36 | 
+  37 |     await expect(page.locator('#displayed-text')).toBeVisible();
+  38 |     await page.locator('#displayed-text').screenshot({path: 'elementscreenshot.jpg'});
+  39 |     await page.locator('.tableFixHead').screenshot({path: 'table.jpeg'});
+  40 |     await page.locator("[name='courses']").screenshot({path: 'webtable.jpg'})
+  41 |     await page.locator('#hide-textbox').click();
+  42 |     await page.screenshot({path: 'screenshot.png'});
+  43 |     await expect(page.locator('#displayed-text')).toBeHidden();
+  44 |     
+  45 | 
+  46 | 
+  47 | })
+  48 | 
+  49 | test ('@smoke Visual Validation', async ({page}) =>
+  50 | {
+  51 |   
+  52 |     await page.goto("https://google.com/");
+  53 |     // expect(await page.screenshot()).toMatchSnapshot('test.png');
+  54 |     
+> 55 |     await expect(page).toHaveScreenshot('test1.png');
+     |                        ^ Error: expect(page).toHaveScreenshot(expected) failed
+  56 | 
+  57 | 
+  58 | })
+```
