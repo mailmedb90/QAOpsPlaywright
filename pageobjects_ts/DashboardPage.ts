@@ -19,18 +19,12 @@ export class DashboardPage
 
     async searchProductAddCart(productName : string)
     {
-
-           const titles = await this.productsText.allTextContents();
-           console.log(titles); 
-           const count = await this.products.count();
-           for (let i = 0; i < count; ++i) {
-              if (await this.products.nth(i).locator("b").textContent() === productName) {
-                 //add to cart
-                 await this.products.nth(i).locator("text= Add To Cart").click();
-                 break;
-              }
-           }
-
+        const productCard = this.page.locator('.card-body', { hasText: productName });
+        const count = await productCard.count();
+        if (count === 0) {
+            throw new Error(`Product not found: ${productName}`);
+        }
+        await productCard.first().locator('text=Add To Cart').click();
     }
 
     async navigateToCart()

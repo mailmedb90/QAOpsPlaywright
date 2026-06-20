@@ -6,3 +6,15 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+# Nested Repository
+RSPlayWrightAutomation/
+
+# Mac Files
+__MACOSX/
+.DS_Store
+
+# Auth State Files
+state.json
+state1.json
+newstate.json
+newtoken.json

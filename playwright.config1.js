@@ -13,6 +13,8 @@ const config = ({
   expect: {
     timeout: 5 * 1000
   },
+  //Uses the test timeout unless configured. Example: await page.locator('#submit').click();
+  // actionTimeout: 10 * 1000,
 
   reporter: 'html',
   projects:[
