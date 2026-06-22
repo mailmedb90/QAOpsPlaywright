@@ -15,7 +15,6 @@ const config = ({
 
 use: {
     browserName: 'chromium',
-    storageState:'state1.json',
     headless: true,
     screenshot: 'on',
     trace: 'on'
