@@ -8,7 +8,7 @@ exports.karttest = base.test.extend(
             productName: "Cucumber - 1 Kg",
             validPromoCode: "rahulshettyacademy",
             invalidPromoCode: "rahulshettyacademy1",
-            quantity: "10",
+            quantity: "1",
             searchProdName: "Beetroot",
             countryName: "India",
             diffCountryName: "Australia",

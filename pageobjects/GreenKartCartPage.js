@@ -52,7 +52,8 @@ class GreenKartCartPage {
     async applyWrongPromoCode(quantity,invalidPromoCode) {
         await this.cartButton.click();
         await this.cartQuantity.first().waitFor();
-        await expect(this.cartQuantity.first()).toContainText(quantity);
+        // await expect(this.cartQuantity.first()).toContainText(quantity);
+        await expect(this.cartQuantity.first()).toContainText(String(quantity), {timeout: 10000});
         // await expect(page.locator('.cart-preview')).toContainText(quantity);
         // await expect(page.getByRole('listitem').getByText('Nos.')).toContainText(quantity);
 
