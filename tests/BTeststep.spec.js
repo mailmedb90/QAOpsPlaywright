@@ -9,8 +9,14 @@ test('Login test',async({page})=>
 
     await test.step('Login to application', async()=>
     {
-        await page.getByPlaceholder('you@email.com').fill("bhaskara4all@gmail.com");
-        await page.getByPlaceholder('••••••').fill("Bhaskar@123451");
+
+        const usename = process.env.APP_USERNAME;
+        const password = process.env.APP_PASSWORD;
+        console.log("Username:", process.env.APP_USERNAME);
+        console.log("Password exists:", !!process.env.APP_PASSWORD);
+
+        await page.getByPlaceholder('you@email.com').fill(usename);
+        await page.getByPlaceholder('••••••').fill(password);
         await page.getByRole('button',{name: 'Sign In'}).click();
         await expect(page.getByRole('link',{name: 'Browse Events →'})).toBeVisible();
     })
